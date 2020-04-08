@@ -1,5 +1,6 @@
 import { ClassKeys } from "./decorators";
 import { ApiController } from "./controller/ApiController";
+import { FileController } from "./controller/FileController";
 
 type Controller = InstanceType<any>;
 
@@ -29,4 +30,4 @@ function getRouter(controllers: Controller[]): any {
   return routers;
 }
 
-export const Routers = getRouter([ApiController]);
+export const Routers = getRouter([ApiController, FileController]);

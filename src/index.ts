@@ -6,6 +6,7 @@ import {Routers} from './routes'
 
 // create express app
 const app = express()
+app.use(express.static('static'))
 app.use(bodyParser.json())
 app.use(require('morgan')('dev'))
 
